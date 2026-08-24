@@ -1,0 +1,228 @@
+.card {
+    border: 1px solid rgb(18, 3, 74);
+    width: 250px;
+    height: 300px;
+    background-color: rgb(199, 200, 239);
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    /*  */
+    transition: all 0.3s linear;
+    display: inline-block;
+    box-shadow: -2px 4px 5px rgb(56, 66, 184);
+}
+
+.card_holder {
+    display: inline-block;
+    margin-top: 50px;
+
+}
+
+.card img {
+    border-radius: 10%;
+    width: 200px;
+    height: 100px;
+    &:hover{
+        scale: 1.3;
+    }
+}
+.card{
+    transition: all 3s linear;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.card button {
+    background-color: rgb(4, 4, 132);
+    border: none;
+    width: 140px;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+    color: white;
+}
+
+.card button:hover {
+    background-color: #0d0552;
+}
+
+footer {
+    background-color: #0d0552;
+    padding: 30px;
+    color: white;
+    margin-top: 200px;
+
+}
+
+header {
+    background-color: #0d0552;
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+
+ul {
+
+    display: flex;
+    gap: 20px;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li {
+    list-style: none;
+}
+
+
+
+
+/* hero section   */
+
+.image_sec img{
+    width: 80%;
+    height: 300px;
+    
+}
+/* .hero{
+    margin: 0px auto;
+    width: 80%;
+    transition: all 1s linear; 
+
+} */
+.main_container{
+    margin-top: 50px;
+}
+
+.image_sec .glass{
+    
+width: 80%;
+height: 350px;
+background-color: rgba(0, 0, 255, 0.647);
+position: absolute;
+top: 95px;
+background: linear-gradient( 235deg, rgb(0, 0, 0, 100%), rgb(0, 0, 0, 100%), rgba(3, 3, 94, 2%), rgba(9, 1, 47, 0.103)
+);
+backdrop-filter: blur(3px);
+margin-top: 50px;
+
+}
+.text_sec{
+    text-align: right;
+    width: 80%;
+    position: absolute;
+    top: 200px;
+    color: aliceblue;
+    left: 50px;
+    font-size: 30px;
+}
+.text_sec button{
+    border: 2px solid rgb(253, 253, 253);
+    background-color: rgb(2, 2, 38);
+    color: white;
+    padding: 5px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+/*  please ignore all the codes before this section     */
+
+.hero button{
+    transition: all 2s linear;
+}
+.hero button:hover{
+    scale: 1.1;
+}
+.hero:hover button{
+    scale: 1.7;
+}
+/* Hero section  */
+.hero{
+    box-shadow: 3px -4px 7px rgb(2, 2, 72);
+    border: 2px solid red;
+    background: linear-gradient(45deg, blue, #0000ff73, #0000ff3c, #ffffff17);
+    height: 350px;
+    width: 80%;
+}
+.hero .card{
+    position: absolute;
+}
+.c1{
+    margin-left: 0px; 
+    z-index: 4;
+}
+.c1:hover{
+    transform: translateX(900px);
+}
+.c2{
+    margin-left: 100px;
+    z-index: 3; 
+}
+.c2:hover{
+    transform: translateX(800px);
+}
+.c3{
+    margin-left: 200px;
+    z-index: 2; 
+}
+.c3:hover{
+    transform: translateX(650px);
+}
+.c4{
+    margin-left: 300px; 
+    z-index: 1;
+}
+.c4:hover{
+    transform: translateX(550px);
+}
+.card_holder .card:hover img{
+    scale: 1.3;
+    transition: all 2s linear;
+}
+.card_holder .card{
+    transition: all 2s linear;
+}
+
+.carholder{
+    border: 1px solid red;
+    height: 300px;
+    min-width: 800px;
+
+}
+.car{
+    height: 50px;
+    width: 100px;
+}
+
+.frontwheel img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    left: 20px;
+    top: 54px;
+}
+.backwheel img{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;    
+    left: 30px;
+    top: 4%;
+}
+.backwheel, .frontwheel{
+    animation: moverotate 3s linear;
+}
+@keyframes moverotate{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(700px);
+    }
+}

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mr. Henry - Senior Full-Stack Engineer & Solutions Architect Portfolio. Showcasing enterprise web applications, cloud systems, and modern UI engineering.">
+  <meta name="keywords" content="Portfolio, Full Stack Developer, Software Engineer, Web Developer, JavaScript, TypeScript, React, Cloud">
+  <meta name="author" content="Mr. Henry">
+  <meta property="og:title" content="Mr. Henry | Senior Full Stack Engineer Portfolio">
+  <meta property="og:description" content="Explore cutting-edge web applications, cloud architectures, and scalable full-stack projects.">
+  <meta property="og:type" content="website">
+  <title>Mr Henry | Senior Full Stack Developer & Architect</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation Bar matching the mockup's royal blue gradient top -->
+  <header class="navbar-header" id="header">
+    <div class="header-container">
+      <a href="#home" class="logo" aria-label="Mr Henry Portfolio Homepage">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">Mr Henry</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <span class="nav-divider">|</span>
+        <a href="#about" class="nav-link">About</a>
+        <span class="nav-divider">|</span>
+        <a href="#projects" class="nav-link">Projects</a>
+        <span class="nav-divider">|</span>
+        <a href="#contact" class="nav-link contact-pill">Contact</a>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <a href="#home" class="mobile-nav-link">Home</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION WITH AUTO-LOOPING TECH VIDEO -->
+    <section class="hero-section" id="home">
+      <div class="hero-wrapper">
+        <!-- Distinct rounded container frame matching mockup design -->
+        <div class="hero-frame">
+          <div class="hero-arch-accent" aria-hidden="true"></div>
+
+          <!-- Video Background Layer with Auto Loop -->
+          <div class="video-container" id="videoContainer">
+            <!-- HTML5 Video element with autoplay, loop, muted, playsinline -->
+            <video 
+              id="heroTechVideo" 
+              autoplay 
+              loop 
+              muted 
+              playsinline 
+              preload="auto"
+              poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' viewBox='0 0 1200 600'><rect width='100%' height='100%' fill='%230a1128'/><circle cx='600' cy='300' r='200' fill='%231e3a8a' opacity='0.3'/></svg>">
+              <!-- High quality tech video sources with automatic fallbacks -->
+              <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-microchip-details-42289-large.mp4" type="video/mp4">
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+
+            <!-- Dynamic interactive Tech Particles Canvas Fallback (always guarantees stunning tech loop) -->
+            <canvas id="techCanvas" class="tech-canvas" aria-hidden="true"></canvas>
+
+            <!-- Video Dark Overlay for accessibility & text contrast -->
+            <div class="video-overlay" aria-hidden="true"></div>
+          </div>
+
+          <!-- Hero Content matching portfolio text content -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="status-dot"></span> Available for Senior Engineering Roles & Freelance Projects
+            </div>
+
+            <h1 class="hero-title">Video Hero Section</h1>
+            
+            <div class="hero-body-grid">
+              <div class="hero-text-block">
+                <p class="hero-subtitle">
+                  <span class="highlight-blue">Full-Stack Architect & Creative Technologist.</span> 
+                  Designing enterprise web solutions, high-throughput backend APIs, and immersive digital platforms.
+                </p>
+                <p class="hero-meta-note">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                  <span>This Section features a background <strong>Tech Video in auto-loop</strong> with interactive canvas fallback</span>
+                </p>
+              </div>
+
+              <div class="hero-cta-group">
+                <!-- WhatsApp Action Button with Hover Effect -->
+                <a 
+                  href="https://wa.me/1234567890?text=Hello%20Mr.%20Henry,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect!" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="btn-whatsapp"
+                  id="whatsappBtn"
+                  aria-label="Contact Mr. Henry on WhatsApp">
+                  <span class="whatsapp-icon-wrap" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.697c.969.531 1.933.821 2.806.821h.005c3.182 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.77-5.767-5.77zm3.367 8.232c-.145.409-.844.786-1.164.834-.319.047-.698.082-2.224-.551-1.951-.809-3.208-2.79-3.305-2.921-.097-.132-.78-1.038-.78-1.98 0-.943.493-1.408.669-1.603.175-.195.384-.244.512-.244.128 0 .256.001.368.006.118.006.275-.045.431.33.16.386.545 1.332.593 1.43.048.098.081.213.016.342-.064.129-.096.21-.192.323-.096.113-.203.253-.29.339-.098.097-.2.203-.086.398.114.195.508.839 1.089 1.356.748.665 1.38.872 1.576.969.195.097.311.086.427-.048.117-.133.497-.579.629-.778.132-.199.263-.165.441-.099.178.066 1.134.535 1.329.633.195.098.326.146.374.228.048.083.048.479-.097.888z"/>
+                      <path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.435 5.176L2 22l4.981-1.399C8.423 21.492 10.155 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.062c-1.684 0-3.242-.51-4.535-1.385l-.326-.219-2.964.832.842-2.884-.24-.343A8.026 8.026 0 0 1 3.938 12c0-4.445 3.616-8.062 8.062-8.062 4.445 0 8.062 3.617 8.062 8.062 0 4.446-3.617 8.062-8.062 8.062z"/>
+                    </svg>
+                  </span>
+                  <span class="whatsapp-btn-text">WhatsApp Me</span>
+                </a>
+
+                <!-- Secondary Portfolio Quick Action -->
+                <a href="#projects" class="btn-secondary">
+                  <span>Explore Work</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION: 5 CARDS WITH SMOOTH translateY HOVER TRANSITION -->
+    <section class="projects-section" id="projects">
+      <div class="section-header-wrap">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Scalable architectures, full-stack web apps, and enterprise solutions</p>
+      </div>
+
+      <div class="projects-grid-container">
+        <div class="projects-grid">
+          
+          <!-- PROJECT 1 -->
+          <div class="project-wrapper">
+            <article class="project-card" data-project-id="1">
+              <div class="card-media">
+                <svg class="project-illustration" viewBox="0 0 260 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fintech Trading Dashboard Illustration">
+                  <!-- Modern Workspace / Dashboard Graphics Matching Mockup Aesthetic -->
+                  <rect width="260" height="160" rx="10" fill="#1e293b"/>
+                  <rect x="15" y="15" width="230" height="130" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                  <!-- Presentation board / screens -->
+                  <rect x="25" y="25" width="70" height="45" rx="3" fill="#38bdf8" fill-opacity="0.15" stroke="#38bdf8" stroke-width="1.2"/>
+                  <line x1="32" y1="35" x2="75" y2="35" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="32" y1="45" x2="85" y2="45" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="32" y1="55" x2="65" y2="55" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+                  <!-- Analytics board -->
+                  <rect x="105" y="25" width="130" height="45" rx="3" fill="#6366f1" fill-opacity="0.15" stroke="#6366f1" stroke-width="1.2"/>
+                  <path d="M115 55 L135 40 L155 48 L180 32 L205 42 L225 30" stroke="#818cf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <!-- Meeting / Desk Table -->
+                  <path d="M40 95 L220 95 L205 125 L55 125 Z" fill="#475569" stroke="#64748b" stroke-width="1.5"/>
+                  <!-- Chairs around table matching the conference mockup illustration -->
+                  <rect x="60" y="80" width="14" height="20" rx="3" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+                  <rect x="95" y="80" width="14" height="20" rx="3" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+                  <rect x="150" y="80" width="14" height="20" rx="3" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+                  <rect x="185" y="80" width="14" height="20" rx="3" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+                  <circle cx="70" cy="110" r="3" fill="#38bdf8"/>
+                  <circle cx="130" cy="110" r="3" fill="#38bdf8"/>
+                  <circle cx="190" cy="110" r="3" fill="#38bdf8"/>
+                </svg>
+              </div>
+
+              <div class="card-content">
+                <span class="project-tag">FINTECH & REAL-TIME</span>
+                <h3 class="card-title">Apex Trade Desk</h3>
+                <p class="card-description">High-frequency cryptocurrency & stock analytics dashboard with low-latency WebSockets streaming.</p>
+                <div class="tech-stack-badges">
+                  <span>React</span>
+                  <span>TypeScript</span>
+                  <span>WebSockets</span>
+                </div>
+              </div>
+
+              <div class="card-action">
+                <button class="btn-view-project" data-project="1" aria-label="View Project 1 details">
+                  View Project 1
+                </button>
+              </div>
+            </article>
+            <div class="project-label">Project 1</div>
+          </div>
+
+          <!-- PROJECT 2 -->
+          <div class="project-wrapper">
+            <article class="project-card" data-project-id="2">
+              <div class="card-media">
+                <svg class="project-illustration" viewBox="0 0 260 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Code Assistant Illustration">
+                  <!-- Developer with Laptop / Code Monitor matching the mockup's 2nd card -->
+                  <rect width="260" height="160" rx="10" fill="#1e293b"/>
+                  <rect x="15" y="15" width="230" height="130" rx="6" fill="#0b1329" stroke="#334155" stroke-width="1.5"/>
+                  <!-- Monitor -->
+                  <rect x="35" y="40" width="80" height="55" rx="4" fill="#1e293b" stroke="#60a5fa" stroke-width="1.5"/>
+                  <path d="M75 95 L75 110 M60 110 L90 110" stroke="#60a5fa" stroke-width="2" stroke-linecap="round"/>
+                  <!-- Code syntax lines on monitor -->
+                  <line x1="45" y1="52" x2="80" y2="52" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="45" y1="62" x2="100" y2="62" stroke="#34d399" stroke-width="1.8" stroke-linecap="round"/>
+                  <line x1="52" y1="72" x2="95" y2="72" stroke="#f472b6" stroke-width="1.8" stroke-linecap="round"/>
+                  <line x1="45" y1="82" x2="75" y2="82" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/>
+                  <!-- Developer Character Illustration -->
+                  <circle cx="170" cy="55" r="18" fill="#fbcfe8"/>
+                  <path d="M152 50 C152 35 188 35 188 50 C188 45 160 40 152 50 Z" fill="#1e293b"/>
+                  <!-- Body / Hoodie -->
+                  <path d="M142 85 C142 70 198 70 198 85 L205 130 L135 130 Z" fill="#ca8a04"/>
+                  <!-- Reading Book / Tablet -->
+                  <polygon points="150,95 185,90 185,115 150,120" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+                  <line x1="157" y1="100" x2="178" y2="97" stroke="#64748b" stroke-width="1"/>
+                  <line x1="157" y1="106" x2="178" y2="103" stroke="#64748b" stroke-width="1"/>
+                  <line x1="157" y1="112" x2="175" y2="109" stroke="#64748b" stroke-width="1"/>
+                </svg>
+              </div>
+
+              <div class="card-content">
+                <span class="project-tag">AI & MACHINE LEARNING</span>
+                <h3 class="card-title">Synthetix AI Copilot</h3>
+                <p class="card-description">Intelligent automated code reviewer with AST analysis, vulnerability scans, and automated PR suggestions.</p>
+                <div class="tech-stack-badges">
+                  <span>Python</span>
+                  <span>Next.js</span>
+                  <span>OpenAI</span>
+                </div>
+              </div>
+
+              <div class="card-action">
+                <button class="btn-view-project" data-project="2" aria-label="View Project 2 details">
+                  View Project 2
+                </button>
+              </div>
+            </article>
+            <div class="project-label">Project 2</div>
+          </div>
+
+          <!-- PROJECT 3 -->
+          <div class="project-wrapper">
+            <article class="project-card" data-project-id="3">
+              <div class="card-media">
+                <svg class="project-illustration" viewBox="0 0 260 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cloud Microservices Engine Illustration">
+                  <!-- Cloud / Infrastructure Topology -->
+                  <rect width="260" height="160" rx="10" fill="#1e293b"/>
+                  <rect x="15" y="15" width="230" height="130" rx="6" fill="#0d1527" stroke="#334155" stroke-width="1.5"/>
+                  <!-- Central Cloud Node -->
+                  <rect x="95" y="30" width="70" height="35" rx="6" fill="#0284c7" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1.5"/>
+                  <text x="130" y="52" fill="#38bdf8" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">CLOUD</text>
+                  <!-- Connecting nodes -->
+                  <path d="M100 65 L55 95 M130 65 L130 95 M160 65 L205 95" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <!-- Pod 1 -->
+                  <rect x="30" y="95" width="55" height="35" rx="5" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+                  <circle cx="45" cy="112" r="4" fill="#a855f7"/>
+                  <line x1="55" y1="112" x2="75" y2="112" stroke="#e2e8f0" stroke-width="1.5"/>
+                  <!-- Pod 2 -->
+                  <rect x="102" y="95" width="55" height="35" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+                  <circle cx="117" cy="112" r="4" fill="#10b981"/>
+                  <line x1="127" y1="112" x2="147" y2="112" stroke="#e2e8f0" stroke-width="1.5"/>
+                  <!-- Pod 3 -->
+                  <rect x="175" y="95" width="55" height="35" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+                  <circle cx="190" cy="112" r="4" fill="#f59e0b"/>
+                  <line x1="200" y1="112" x2="220" y2="112" stroke="#e2e8f0" stroke-width="1.5"/>
+                </svg>
+              </div>
+
+              <div class="card-content">
+                <span class="project-tag">DEVOPS & DISTRIBUTED</span>
+                <h3 class="card-title">CloudPulse Engine</h3>
+                <p class="card-description">Distributed Kubernetes orchestrator managing 10k+ containerized microservices across multi-region clusters.</p>
+                <div class="tech-stack-badges">
+                  <span>Go</span>
+                  <span>Kubernetes</span>
+                  <span>Docker</span>
+                </div>
+              </div>
+
+              <div class="card-action">
+                <button class="btn-view-project" data-project="3" aria-label="View Project 3 details">
+                  View Project 3
+                </button>
+              </div>
+            </article>
+            <div class="project-label">Project 3</div>
+          </div>
+
+          <!-- PROJECT 4 -->
+          <div class="project-wrapper">
+            <article class="project-card" data-project-id="4">
+              <div class="card-media">
+                <svg class="project-illustration" viewBox="0 0 260 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Real-time Workspace Illustration">
+                  <!-- Team Collaboration & Visual Canvas -->
+                  <rect width="260" height="160" rx="10" fill="#1e293b"/>
+                  <rect x="15" y="15" width="230" height="130" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                  <!-- Sticky notes / collaborative whiteboard -->
+                  <rect x="30" y="30" width="50" height="40" rx="4" fill="#fef08a" stroke="#fde047" stroke-width="1"/>
+                  <line x1="38" y1="42" x2="68" y2="42" stroke="#854d0e" stroke-width="1.5"/>
+                  <line x1="38" y1="52" x2="60" y2="52" stroke="#854d0e" stroke-width="1.5"/>
+                  <!-- Canvas node 2 -->
+                  <rect x="100" y="35" width="60" height="40" rx="4" fill="#bae6fd" stroke="#7dd3fc" stroke-width="1"/>
+                  <line x1="110" y1="47" x2="148" y2="47" stroke="#075985" stroke-width="1.5"/>
+                  <line x1="110" y1="57" x2="135" y2="57" stroke="#075985" stroke-width="1.5"/>
+                  <!-- Canvas node 3 -->
+                  <rect x="180" y="30" width="50" height="40" rx="4" fill="#bbf7d0" stroke="#86efac" stroke-width="1"/>
+                  <line x1="188" y1="42" x2="218" y2="42" stroke="#166534" stroke-width="1.5"/>
+                  <line x1="188" y1="52" x2="210" y2="52" stroke="#166534" stroke-width="1.5"/>
+                  <!-- User cursor pointers -->
+                  <path d="M70 70 L75 88 L80 82 L88 85 L70 70 Z" fill="#ef4444"/>
+                  <rect x="85" y="80" width="45" height="15" rx="3" fill="#ef4444"/>
+                  <text x="88" y="91" fill="#fff" font-size="9" font-family="sans-serif">Sarah</text>
+
+                  <path d="M160 85 L165 103 L170 97 L178 100 L160 85 Z" fill="#3b82f6"/>
+                  <rect x="175" y="95" width="45" height="15" rx="3" fill="#3b82f6"/>
+                  <text x="178" y="106" fill="#fff" font-size="9" font-family="sans-serif">Henry</text>
+
+                  <!-- Connection spline -->
+                  <path d="M80 50 Q 140 20 180 50" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2 2" fill="none"/>
+                </svg>
+              </div>
+
+              <div class="card-content">
+                <span class="project-tag">REALTIME & COLLAB</span>
+                <h3 class="card-title">Workspace Live</h3>
+                <p class="card-description">High-concurrency collaborative whiteboard with spatial audio, CRDT sync, and dynamic markdown canvas.</p>
+                <div class="tech-stack-badges">
+                  <span>WebRTC</span>
+                  <span>Node.js</span>
+                  <span>Redis</span>
+                </div>
+              </div>
+
+              <div class="card-action">
+                <button class="btn-view-project" data-project="4" aria-label="View Project 4 details">
+                  View Project 4
+                </button>
+              </div>
+            </article>
+            <div class="project-label">Project 4</div>
+          </div>
+
+          <!-- PROJECT 5 -->
+          <div class="project-wrapper">
+            <article class="project-card" data-project-id="5">
+              <div class="card-media">
+                <svg class="project-illustration" viewBox="0 0 260 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Design System & UI Components Illustration">
+                  <!-- Component Library & Design Tokens -->
+                  <rect width="260" height="160" rx="10" fill="#1e293b"/>
+                  <rect x="15" y="15" width="230" height="130" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                  <!-- Button Component preview -->
+                  <rect x="30" y="30" width="85" height="26" rx="13" fill="#ef4444"/>
+                  <text x="72" y="47" fill="#fff" font-size="10" font-family="sans-serif" text-anchor="middle" font-weight="600">Primary CTA</text>
+                  <!-- Switch Component preview -->
+                  <rect x="140" y="32" width="40" height="22" rx="11" fill="#10b981"/>
+                  <circle cx="168" cy="43" r="8" fill="#ffffff"/>
+                  <!-- Badge Component preview -->
+                  <rect x="190" y="33" width="45" height="20" rx="4" fill="#6366f1" fill-opacity="0.2" stroke="#818cf8"/>
+                  <text x="212" y="47" fill="#c7d2fe" font-size="9" font-family="sans-serif" text-anchor="middle">Active</text>
+                  <!-- Form input element -->
+                  <rect x="30" y="70" width="130" height="30" rx="6" fill="#1e293b" stroke="#64748b"/>
+                  <line x1="42" y1="85" x2="90" y2="85" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+                  <!-- Color Palette chips -->
+                  <circle cx="180" cy="85" r="10" fill="#3b82f6"/>
+                  <circle cx="205" cy="85" r="10" fill="#8b5cf6"/>
+                  <circle cx="230" cy="85" r="10" fill="#ec4899"/>
+                  <!-- Progress bar -->
+                  <rect x="30" y="115" width="200" height="8" rx="4" fill="#334155"/>
+                  <rect x="30" y="115" width="135" height="8" rx="4" fill="url(#p5-grad)"/>
+                  <defs>
+                    <linearGradient id="p5-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#3b82f6"/>
+                      <stop offset="100%" stop-color="#8b5cf6"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+
+              <div class="card-content">
+                <span class="project-tag">UI ARCHITECTURE</span>
+                <h3 class="card-title">Aurora UI Kit</h3>
+                <p class="card-description">WCAG 2.1 AA compliant design system with 60+ modular, framework-agnostic accessible components.</p>
+                <div class="tech-stack-badges">
+                  <span>CSS3</span>
+                  <span>TypeScript</span>
+                  <span>Storybook</span>
+                </div>
+              </div>
+
+              <div class="card-action">
+                <button class="btn-view-project" data-project="5" aria-label="View Project 5 details">
+                  View Project 5
+                </button>
+              </div>
+            </article>
+            <div class="project-label">Project 5</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & TECH MASTERY SECTION (Adds genuine portfolio depth) -->
+    <section class="about-section" id="about">
+      <div class="about-container">
+        <div class="about-card">
+          <div class="about-grid">
+            <div class="about-text">
+              <span class="badge-sub">ABOUT THE DEVELOPER</span>
+              <h2 class="about-title">Crafting Resilient Digital Experiences</h2>
+              <p>With over 8 years of software engineering expertise, I specialize in architecting performant full-stack systems, modern progressive web apps, and clean responsive frontends that delight users across all screen sizes.</p>
+              
+              <div class="skills-chips">
+                <span class="skill-chip">TypeScript</span>
+                <span class="skill-chip">React / Next.js</span>
+                <span class="skill-chip">Node.js & Express</span>
+                <span class="skill-chip">Python</span>
+                <span class="skill-chip">Docker & Kubernetes</span>
+                <span class="skill-chip">PostgreSQL</span>
+                <span class="skill-chip">Tailwind & CSS Grid</span>
+                <span class="skill-chip">WebSockets & WebRTC</span>
+              </div>
+            </div>
+
+            <div class="metrics-grid">
+              <div class="metric-box">
+                <div class="metric-number">8+</div>
+                <div class="metric-label">Years Experience</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-number">45+</div>
+                <div class="metric-label">Projects Delivered</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-number">99.9%</div>
+                <div class="metric-label">Uptime Architecture</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-number">100%</div>
+                <div class="metric-label">Responsive Guarantee</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="contact-card">
+        <h2>Ready to build something extraordinary?</h2>
+        <p>Let's collaborate on your next enterprise platform, responsive redesign, or high-performance web application.</p>
+        <div class="contact-actions">
+          <a href="https://wa.me/1234567890?text=Hello%20Mr.%20Henry,%20let's%20discuss%20a%20new%20project!" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+            <span class="whatsapp-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.697c.969.531 1.933.821 2.806.821h.005c3.182 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.77-5.767-5.77zm3.367 8.232c-.145.409-.844.786-1.164.834-.319.047-.698.082-2.224-.551-1.951-.809-3.208-2.79-3.305-2.921-.097-.132-.78-1.038-.78-1.98 0-.943.493-1.408.669-1.603.175-.195.384-.244.512-.244.128 0 .256.001.368.006.118.006.275-.045.431.33.16.386.545 1.332.593 1.43.048.098.081.213.016.342-.064.129-.096.21-.192.323-.096.113-.203.253-.29.339-.098.097-.2.203-.086.398.114.195.508.839 1.089 1.356.748.665 1.38.872 1.576.969.195.097.311.086.427-.048.117-.133.497-.579.629-.778.132-.199.263-.165.441-.099.178.066 1.134.535 1.329.633.195.098.326.146.374.228.048.083.048.479-.097.888z"/>
+                <path d="M12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.435 5.176L2 22l4.981-1.399C8.423 21.492 10.155 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.062c-1.684 0-3.242-.51-4.535-1.385l-.326-.219-2.964.832.842-2.884-.24-.343A8.026 8.026 0 0 1 3.938 12c0-4.445 3.616-8.062 8.062-8.062 4.445 0 8.062 3.617 8.062 8.062 0 4.446-3.617 8.062-8.062 8.062z"/>
+              </svg>
+            </span>
+            <span>Start WhatsApp Chat</span>
+          </a>
+          <a href="mailto:contact@mrhenry.dev" class="btn-email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>Email Direct</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- INTERACTIVE PROJECT DETAILS MODAL -->
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close project details">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="modal-body" id="modalContent">
+        <!-- Injected dynamically via script.js based on project clicked -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER with Royal Blue / Dark Gradient matching the mockup -->
+  <footer class="footer-bar">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">Mr Henry</div>
+        <p class="footer-tagline">Senior Full-Stack Engineer & System Architect</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X Twitter Profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom-copy">
+      <p>© 2026 Mr Henry. Crafted with precision for all viewports and devices.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
